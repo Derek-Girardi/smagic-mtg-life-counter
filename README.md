@@ -1,6 +1,6 @@
 # smagic_life_counter
 
-A new Flutter project.
+This read me is trash so once I get this project more up to speed, ill update. For now, this is just a MTG life counter like the many on the play store. Just wanted one that didnt run like crap and didnt have ads so hopefully I can achieve that here with flutter. 
 
 ## Getting Started
 
