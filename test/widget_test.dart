@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:smagic_life_counter/app.dart';
+import 'package:smagic_life_counter/screens/app.dart';
 
 import 'package:smagic_life_counter/main.dart';
 
