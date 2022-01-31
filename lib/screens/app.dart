@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:smagic_life_counter/screens/two_player.dart';
 import 'package:smagic_life_counter/util/constants.dart';
 import '../widgets/count_life_btn.dart';
 import '../cubit/counter_cubit.dart';
@@ -13,11 +14,13 @@ class SmagicApp extends StatelessWidget {
     return BlocProvider<CounterCubit>(
       create: (context) => CounterCubit(),
       child: MaterialApp(
-        title: 'test',
-        theme: ThemeData(),
-        darkTheme: ThemeData.dark(),
-        home: const MyHomePage(title: 'my home page'),
-      ),
+          title: 'Smagic Life Counter',
+          theme: ThemeData(),
+          darkTheme: ThemeData.dark(),
+          home: const MyHomePage(title: 'Smagic Home Screen'),
+          routes: {
+            "second": (context) => const TwoPlayer(),
+          }),
     );
   }
 }
@@ -82,10 +85,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   LifeCountBtn(text: '1', onPressed: () => null),
                   const SizedBox(width: 10.0),
-                  LifeCountBtn(text: '2', onPressed: () => null),
+                  LifeCountBtn(
+                      text: '2',
+                      onPressed: () => Navigator.pushNamed(context, "second")),
                   const SizedBox(width: 10.0),
                   LifeCountBtn(text: '3', onPressed: () => null),
-                  const SizedBox(width: 10.0),
+                ],
+              ),
+              const SizedBox(height: 10.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
                   LifeCountBtn(text: '4', onPressed: () => null),
                   const SizedBox(width: 10.0),
                   LifeCountBtn(text: '5', onPressed: () => null),
@@ -93,7 +104,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   LifeCountBtn(text: '6', onPressed: () => null),
                 ],
               ),
-              // _playerCountBtnRow(),
               const SizedBox(height: 40.0),
               Text('Choose Starting life', style: textFieldStyle),
               const SizedBox(height: 40.0),
