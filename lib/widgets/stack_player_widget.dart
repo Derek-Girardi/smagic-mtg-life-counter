@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 class PlayerStackWidget extends StatefulWidget {
   const PlayerStackWidget({Key? key}) : super(key: key);
 
+  //TODO: named parameters for color, text, onPressed, others?
+
   @override
   _PlayerStackWidgetState createState() => _PlayerStackWidgetState();
 }
@@ -18,7 +20,7 @@ class _PlayerStackWidgetState extends State<PlayerStackWidget> {
   Widget build(BuildContext context) {
     return Stack(children: <Widget>[
       Card(
-          color: Colors.yellow,
+          color: Colors.blue,
           child: Container(
               //constraints: const BoxConstraints.expand(),
               child: Row(
